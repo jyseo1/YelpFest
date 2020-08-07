@@ -1,0 +1,48 @@
+<%- include("../partials/header") %>
+
+<div class="row" style="margin-top: 10px;">
+	<div class="col-md-6 col-xs-6">
+		<h1 style="margin-top: 0px;"><%= user.firstName + " " + user.lastName %></h1>
+		<p>
+		<!-- Shows if user is admin -->
+			<% if(!currentUser && user.isAdmin || user.isAdmin && !(user._id.equals(currentUser._id))){ %>
+				<!-- If no logged in user & found user is admin OR if logged in user is NOT owner of shown user profile -->
+				<em>This user is an admin</em>
+				<% }else{ %>
+					<!-- If the logged in user is the owner of shown user profile -->
+					<% if(user.isAdmin && user._id.equals(currentUser._id)){ %>
+						<em>You're an admin!</em>
+					<% } %>
+			<% } %>
+		</p>
+		<div>
+			<!-- ERROR WITH THIS DIV -->
+			<% if(currentUser && user._id.equals(currentUser._id)){ %>
+					<a style="margin-bottom: 10px;" class="btn btn-xs btn-warning" href="/users/<%= user._id %>/edit">EDIT PROFILE</a>
+					<form class="delete-form" action="/users/<%= user._id %>?_method=DELETE" method="POST">
+						<button style="margin-bottom: 10px;" onclick="return confirm('Are you sure you want to delete your account? You will not be able to undo this.');" class="btn btn-xs btn-danger">DELETE ACCOUNT</button>
+					</form>
+				<% } %>
+		</div>
+		<div class="thumbnail" id="userAvatar">
+			<img src="<%= user.avatar %>" alt="user profile image">
+		</div>
+		<h5>Email: <a href="mailto:<%= user.email %>"><%= user.email %></a></h5>
+		<h5 style="margin-bottom: 3px;">Bio:</h5>
+		<p><%= user.bio %></p>
+	</div>
+	<div class="col-md-6 col-xs-6">
+		<h4><%= user.username %>'s posts:</h4>
+		<%if(campgrounds.length < 1) { %>
+			<h6 class="mt-4 ml-2"><em>No posts submitted yet...</em></h6>
+		<%} else{ %>
+				<ul>
+					<% campgrounds.forEach(function(campground){ %>
+						<li><a href="/campgrounds/<%=campground.id%>"><%= campground.name %></a></li>
+					<% }) %>
+				</ul>
+		<% } %>
+	</div>
+</div>
+
+<%- include("../partials/footer") %>

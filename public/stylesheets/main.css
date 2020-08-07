@@ -1,0 +1,62 @@
+label {
+	font-weight: 400;	
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+}
+
+#userAvatar {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.delete-form {
+	display: inline-block;
+}
+
+@media (min-width: 768px) {
+	.thumbnail img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+	
+}
+
+@media (min-width: 768px) {
+	#images {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+	#showPageImage {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+}
+
+#map {
+	margin-top: 10px;
+	height: 400px;
+	width: 100%;
+}
+
+#descriptionBox {
+  width:70%;
+  padding-top:5px;
+  padding-left:3px;
+  padding-bottom:10px;
+}
