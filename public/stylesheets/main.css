@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+#indexH1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+}
+
 label {
 	font-weight: 400;	
 }
@@ -29,7 +51,17 @@ label {
     height: auto;
     width: 100%;
   }
-	
+	.jumbotron h1 {
+    font-size: 50px;
+  }
+}
+
+.jumbotron .glyphicon {
+  top: 5px;;
+}
+
+.jumbotron p {
+  font-size: 19px;
 }
 
 @media (min-width: 768px) {

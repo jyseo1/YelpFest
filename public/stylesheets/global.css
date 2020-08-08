@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+	font-family: 'Lato', sans-serif;
+ }
+
 /* Variables */
 :root {
 	--body-color: rgb(247, 250, 252);
@@ -5,7 +12,7 @@
 	--accent-color: #0a721b;
 	--link-color: #ffffff;
 	--font-color: rgb(105, 115, 134);
-	--body-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	--body-font-family: 'Lato', sans-serif;
 	--radius: 6px;
 	--form-width: 400px;
  }
@@ -16,8 +23,8 @@
  }
  body {
 	font-family: var(--body-font-family);
-	font-size: 16px;
-	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	/* -webkit-font-smoothing: antialiased; */
  }
  
  /* Layout */
