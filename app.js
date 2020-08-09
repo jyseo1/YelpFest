@@ -21,6 +21,7 @@ var commentRoutes = require("./routes/comments"),
 	
 // Connecting local Mongo database
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_stripe";
+retryWrites=true;
 mongoose.connect(url, {
 	useCreateIndex: true,
 	useNewUrlParser: true,
