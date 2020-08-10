@@ -1,9 +1,10 @@
 <%- include("../partials/header") %>
 
 
-	<div class="row">
+<div class="row">
+	<div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
 		<h1 style="text-align: center;">Create a New Campground</h1>
-		<div style="width: 30%; margin: 25px auto;">
+		<!-- <div style="width: 30%; margin: 25px auto;"> -->
 			<form action="/campgrounds" method="POST">
 				<div class="form-group">
 					<input class="form-control" type="text" name="name" placeholder="Name">
@@ -25,8 +26,11 @@
 					<button class="btn btn-md btn-primary btn-block">Submit</button>
 				</div>
 			</form>
-			<a href="/campgrounds">Go Back</a>
-		</div>
+	</div>
+	<div class="col-xs-12 text-center" style="padding-bottom: 40px;">
+		<a href="/campgrounds">Go Back</a>
+	</div>
+		<!-- </div> -->
 	</div>
 
 <%- include("../partials/footer") %>
