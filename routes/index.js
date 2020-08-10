@@ -52,7 +52,7 @@ router.post("/register", function(req, res){
 			// return res.render("register", {"error": err.message});
 		}
 		passport.authenticate("local")(req, res, function(){
-			req.flash("success", "Successfully Signed Up. Welcome to YelpFest, " + user.username + "!");
+			req.flash("success", "Successfully Signed Up. Welcome to YelpFest, " + user.username + "! Go to Home, or pay registration fee to create new festival.");
 			res.redirect("/checkout");
 		});
 	})
