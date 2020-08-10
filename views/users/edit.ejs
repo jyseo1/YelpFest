@@ -1,10 +1,11 @@
 <%- include("../partials/header") %>
 
-<%= user %>
+<!-- <%= user %> -->
 
-	<div class="row">
+<div class="row">
+	<div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
 		<h1 style="text-align: center;">Edit <%= user.username %>'s Profile</h1>
-		<div style="width: 30%; margin: 25px auto;">
+		<!-- <div style="width: 30%; margin: 25px auto;"> -->
 			<form action="/users/<%= user._id %>?_method=PUT" method="POST">
 				<div class="form-group">
 					<label>Username: <em>cannot be changed</em></label>
@@ -47,8 +48,11 @@
 					<button class="btn btn-md btn-primary btn-block">Update Profile</button>
 				</div>
 			</form>
-			<a href="/users/<%=user._id%>">Go Back</a>
-		</div>
 	</div>
+	<!-- </div> -->
+	<div class="col-xs-12 text-center" style="padding-bottom: 40px;">
+		<a href="/users/<%=user._id%>">Go Back</a>
+	</div>
+</div>
 
 <%- include("../partials/footer") %>

@@ -27,9 +27,11 @@
 		<div class="thumbnail" id="userAvatar">
 			<img src="<%= user.avatar %>" alt="user profile image">
 		</div>
-		<h5>Email: <a href="mailto:<%= user.email %>"><%= user.email %></a></h5>
-		<h5 style="margin-bottom: 3px;">Bio:</h5>
-		<p><%= user.bio %></p>
+		<div>
+			<h5>Email: <a href="mailto:<%= user.email %>"><%= user.email %></a></h5>
+			<h5 style="margin-bottom: 3px;">Bio:</h5>
+			<p><%= user.bio %></p>
+		</div>
 	</div>
 	<div class="col-md-6 col-xs-6">
 		<h4><%= user.username %>'s posts:</h4>
