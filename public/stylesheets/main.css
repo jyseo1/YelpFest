@@ -25,26 +25,25 @@ label {
 }
 
 .thumbnail img {
-  max-height: 300px;
-  max-width: 300px;
   width: 100%;
 }
 
 .thumbnail {
   padding: 0;
-  /* border: 0 none;
-  box-shadow: none; */
-  display: inline-block;
 }
 
 .thumbnail .caption-full {
 	padding: 9px;
 }
 
-/* #userAvatar {
+#userAvatar{
   max-height: 300px;
   max-width: 300px;
-} */
+  /* width: 100%; */
+  /* border: 0 none;
+  box-shadow: none; */
+  display: inline-block;
+}
 
 .delete-form {
 	display: inline-block;
