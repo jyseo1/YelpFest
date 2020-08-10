@@ -73,5 +73,5 @@ app.all("*", function(req, res){
 
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
-	console.log("YelpCamp_v2_Stripe Server has started!! On port: " + port);	
+	console.log("YelpFest Server has started!! On port: " + port);	
 });

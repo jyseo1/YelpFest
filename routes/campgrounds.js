@@ -17,7 +17,7 @@ var geocoder = NodeGeocoder(options);
 
 //INDEX - show all campgrounds
 router.get("/", function(req, res){
-	if(req.query.paid) res.locals.success = "Payment succeeded, welcome to YelpCamp!";
+	if(req.query.paid) res.locals.success = "Payment succeeded, welcome to YelpFest!";
 	// Get all campgrounds from DB
 	Campground.find({}, (function(err, allCampgrounds){
 		if(err){
